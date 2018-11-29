@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+			.left{width:49%;float:left;}
+			button.hd{width:100%;margin:5px 0;}
+			.right{width:49%;float:right;display:flex;flex:0 0 49%;flex-wrap:wrap;}
+			.player{width:100%;margin:5px 0;}
+			.sub_ground_box{display:flex;flex-wrap:nowrap;flex-direction:row;justify-content:space-between;}
+			.sub_ground_box.first{align-items:flex-start;width:100%;}
+			.sub_ground_box.second{align-items:flex-start;width:100%;}
+			.sub_ground_box.third{align-items:flex-end;width:100%;}
+			.player{width:100%;margin:5px 0;display:flex;justify-content:center;text-align: center;}
+			.playground{display:flex;flex-wrap:wrap;justify-content:center;}
+			.groundbox{display:flex;justify-content:center;align-items:center;width:100%;height:100%;}
+			.player{display:none;border:none;}
+			.player span {display: block;}
+			.hdactive{background-color:#444;pointer-events:none;color:#fff;}
+  	  </style>
+ </head>
+<body>
+	<div class="playground">
+		<div class="left">
+			<button class="hd">1</button>
+			<button class="hd">2</button>
+			<button class="hd">3</button>
+			<button class="hd">4</button>
+			<button class="hd">5</button>
+			<button class="hd">6</button>
+			<button class="hd">7</button>
+			<button class="hd">8</button>
+			<button class="hd">9</button>
+			<button class="hd">10</button>
+			<button class="hd">11</button>
+		</div>
+		<div class="right"?
+			<div class="ground_box">
+				<div class="sub_ground_box first">
+					<div class="groundbox">
+						<div class="player">
+							<i class>🙍</i>
+							<span>1</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>2</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>3</span>
+						</div>
+					</div>
+				</div>
+				<div class="sub_ground_box second">
+					<div class="groundbox">
+						<div class="player">
+							<i class>🙍</i>
+							<span>4</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>5</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>6</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>7</span>
+						</div>
+					</div>
+				</div>
+				<div class="sub_ground_box third">
+					<div class="groundbox">
+						<div class="player">
+							<i class>🙍</i>
+							<span>8</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>9</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>10</span>
+						</div>
+						<div class="player">
+							<i class>🙍</i>
+							<span>11</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/snippet-javascript-console.min.js"></script>
+	<script>
+		var HDMaster =
+		{
+			simple_click: function()
+			{
+					var modal = document.querySelectorAll('.player');
+					var btns = document.querySelectorAll('.hd');
+					[].forEach.call(btns, function(el)
+					{
+						el.onclick = function()
+						{
+							var cur = $(btns).index($(this));
+							$(this).addClass("hdactive");
+							//console.log(cur);
+							$(modal).eq(cur).css('display','block');
+							//console.log(modal);
+						}
+					})
+			}
+		};
+		$(document).ready(function() 
+		{
+			HDMaster.simple_click();
+		});
+	</script>	
+</body>
+</html>
